@@ -1,6 +1,4 @@
 import axios, { AxiosResponse } from 'axios';
-import { request } from 'http';
-import { act } from 'react-dom/test-utils';
 import { Activity } from '../models/activity';
 
 const sleep = (delay: number) =>{
