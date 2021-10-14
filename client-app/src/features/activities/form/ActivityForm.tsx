@@ -32,6 +32,7 @@ export default observer (function ActivityForm(){
  
 
     function handleSubmit(){
+        console.log('reached handleSubmit');
         if(activity.id.length === 0){
             let newActivity = {
                 ...activity,
@@ -54,7 +55,7 @@ export default observer (function ActivityForm(){
 
     return(
         <Segment clearing>
-            <Form onSubmit={handleSubmit} autoComplete='off'>
+            <Form autoComplete='off'>
                 <Form.Input placeholder='Title' value={activity.title} name='title' onChange={handleInputChange}/>
                 <Form.TextArea placeholder='Description' value={activity.description} name='description' onChange={handleInputChange}/>
                 <Form.Input placeholder='Category' value={activity.category} name='category' onChange={handleInputChange}/>
