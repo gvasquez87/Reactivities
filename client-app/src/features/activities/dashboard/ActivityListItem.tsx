@@ -1,9 +1,8 @@
 import { format } from 'date-fns';
-import { SyntheticEvent, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Icon, Item, ItemGroup, Segment } from 'semantic-ui-react';
 import { Activity } from '../../../app/models/activity';
-import { useStore } from '../../../app/stores/store';
 
 interface Props {
     activity: Activity
@@ -11,7 +10,6 @@ interface Props {
 
 export default function ActivityListItem({activity}: Props){
 
-    const {activityStore} = useStore();
 
     return(
         <Segment.Group>
